@@ -1,0 +1,17 @@
+mysql> select employees.empid,employees.first_name,department.dept_id from  employees INNER JOIN department ON employees.dept_id=department.dep
+t_id where location_id=1700;
++-------+------------+---------+
+| empid | first_name | dept_id |
++-------+------------+---------+
+| 2003  | rahul      |     226 |
++-------+------------+---------+
+1 row in set (0.01 sec)
+
+mysql> select employees.empid,employees.first_name,department.dept_id from  employees INNER JOIN department ON employees.dept_id=department.dept_id where location_id!=1700;
++-------+------------+---------+
+| empid | first_name | dept_id |
++-------+------------+---------+
+| 2001  | gopal      |     228 |
+| 2002  | rakhi      |     227 |
++-------+------------+---------+
+2 rows in set (0.00 sec)
